@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Define the path using the absolute, fixed path for user tineoc
 REPO_PATH="/Users/tineoc/Documents/Code/homebrew-packages"
 
