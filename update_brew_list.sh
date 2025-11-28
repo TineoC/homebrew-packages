@@ -1,9 +1,11 @@
 #!/bin/bash
 
-export PATH="/opt/homebrew/bin:$PATH"
+# Set the brew path. Prioritize BREW_PATH if set, otherwise default to Homebrew.
+BREW_COMMAND_PATH="${BREW_PATH:-/opt/homebrew/bin}"
+export PATH="$BREW_COMMAND_PATH:$PATH"
 
 # Define the path using the absolute, fixed path for user tineoc
-REPO_PATH="/Users/tineoc/Documents/Code/homebrew-packages"
+REPO_PATH="${1:-/Users/tineoc/Documents/Code/homebrew-packages}"
 
 echo "Navigating to repository..."
 cd "$REPO_PATH" || exit
